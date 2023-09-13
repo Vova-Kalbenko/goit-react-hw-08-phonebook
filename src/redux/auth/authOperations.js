@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 // =========================================
 
 axios.defaults.baseURL='https://connections-api.herokuapp.com';
@@ -54,7 +54,7 @@ export const logout = createAsyncThunk(
       await axios.post('/users/logout');
       token.unset();
     } catch (error) {
-      toast.error(error.message);
+      // toast.error(error.message);
       return rejectWithValue(error.message);
     }
   }

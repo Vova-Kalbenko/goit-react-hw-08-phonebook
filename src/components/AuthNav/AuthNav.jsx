@@ -1,4 +1,4 @@
-import { Box } from 'components/Box';
+// import { Box } from 'components/Box';
 import { Link } from 'react-router-dom';
 // import { HiOutlineUserAdd,HiOutlineLogin } from 'react-icons/hi';
 // import { AuthStyled,  LinkStyled } from './AuthNav.styled';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const AuthNav = () => {
   return (
     <>
-      <Box as={'nav'} display="flex">
+
         <ul>
           <li>
             <Link to="register">
@@ -21,7 +21,7 @@ export const AuthNav = () => {
             </Link>
           </li>
         </ul>
-      </Box>
+
     </>
   );
 };

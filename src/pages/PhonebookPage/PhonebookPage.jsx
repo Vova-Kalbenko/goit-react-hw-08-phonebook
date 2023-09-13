@@ -2,16 +2,16 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import {
   selectContacts,
-  selectIsLoading,
-} from 'redux/contacts/contactsSelectors';
-import { updateFilter } from 'redux/filter/filterSlice';
-import { addContacts } from 'redux/contacts/contactsOperations';
+  // selectIsLoading,
+} from 'redux/contacts/contacts-selectors';
+import { updateFilter } from 'redux/filter/filter-slice';
+import { addContacts } from 'redux/contacts/contacts-operations';
 
 import { Phonebook } from '../../components/Phonebook/Phonebook';
 import { ContactList } from '../../components/ContactList/ContactList';
 import { Filter } from '../../components/Filter/Filter';
 import { Section } from '../../components/Section/Section';
-import { Loader } from '../../components/Loader/Loader';
+// import { Loader } from '../../components/Loader/Loader';
 
 // import { toast } from 'react-toastify';
 // import { PhonebookMain } from './PhonebookPage.styled';
@@ -19,7 +19,7 @@ import { Loader } from '../../components/Loader/Loader';
 
 const PhonebookPage = () => {
   const contacts = useSelector(selectContacts);
-  const isLoading = useSelector(selectIsLoading);
+  // const isLoading = useSelector(selectIsLoading);
 
   const dispatch = useDispatch();
 
@@ -45,7 +45,7 @@ const PhonebookPage = () => {
         <Filter onChangeFilter={onChangeFilter} />
         <ContactList />
       </Section>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
     </main>
   );
 };

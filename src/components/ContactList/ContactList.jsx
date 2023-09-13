@@ -2,16 +2,14 @@
 // import Avatar from 'react-avatar';
 
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectContacts,
-  selectFilterContacts,
-} from 'redux/contacts/contactsSelectors';
+import { selectContacts, selectFilterContacts } from 'redux/contacts/contacts-selectors';
 
 // import { Contact, Ul, BtnWrapper, Button } from './ContactList.styled';
 // import { useState } from 'react';
-import { deleteContacts } from 'redux/contacts/contactsOperations';
+import { deleteContacts } from 'redux/contacts/contacts-operations';
 // import { Modal } from 'components/Modal/Modal';
 // ===========================
+
 
 export const ContactList = () => {
 //   const [isModalOpen, setIsModalOpen] = useState(false);
