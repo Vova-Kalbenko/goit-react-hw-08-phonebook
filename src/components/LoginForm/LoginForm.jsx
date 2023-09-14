@@ -7,9 +7,9 @@ import { login } from 'redux/auth/authOperations';
 // import { VscPass } from 'react-icons/vsc';
 // import { Title, Label, Input, Button } from './LoginForm.styled';
 import { selectAuthIsLoading } from 'redux/auth/authSelectors';
-// import { Loader } from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 // ==============================
-
+import css from './LoginForm.module.css'
 export const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -92,7 +92,7 @@ export const LoginForm = () => {
           {/* Увійти <VscPass /> */}
         </button>
       </form>
-      {/* {isLoading && <Loader />} */}
+      {isLoading && <Loader />}
     </>
   );
 };

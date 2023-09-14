@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 
 // import { HomePageMain, HomePageTitle, HomePageInfo } from './HomePage.styled';
 // ==============================
-
+import css from './HomePage.module.css'
 const HomePage = () => {
   const token = useSelector(selectAuthToken);
   const { name } = useSelector(selectAuthUser);
   return (
-    <main>
+    <main className={css.HomePageMain}>
       {token ? (
         <>
           <h1> Вітаю, {name} </h1>

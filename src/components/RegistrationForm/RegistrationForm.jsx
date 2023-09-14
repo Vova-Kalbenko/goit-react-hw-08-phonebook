@@ -7,7 +7,7 @@ import { register } from 'redux/auth/authOperations';
 
 // import { Title, Label, Input, Button } from './RegistrationForm.styled';
 import { useNavigate } from 'react-router-dom';
-// import { Loader } from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import { selectAuthIsLoading } from 'redux/auth/authSelectors';
 // ==============================
 
@@ -111,7 +111,7 @@ export const RegistrationForm = () => {
            {/* <VscPass /> */}
         </button>
       </form>
-      {/* {isLoading && <Loader />} */}
+      {isLoading && <Loader />}
     </>
   );
 };

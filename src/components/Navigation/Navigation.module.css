@@ -1,0 +1,16 @@
+.headerLogo {
+    margin-right: 188px;
+    font-size: 18px;
+    line-height: 1.11;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 133.333% */
+    letter-spacing: -0.36px;
+    text-transform: uppercase;
+}
+.NavigationUl{
+    list-style: none;
+}

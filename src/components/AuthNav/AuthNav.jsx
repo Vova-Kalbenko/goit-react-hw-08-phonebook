@@ -2,12 +2,12 @@
 import { Link } from 'react-router-dom';
 // import { HiOutlineUserAdd,HiOutlineLogin } from 'react-icons/hi';
 // import { AuthStyled,  LinkStyled } from './AuthNav.styled';
-
+import css from './AuthNav.module.css'
 export const AuthNav = () => {
   return (
     <>
 
-        <ul>
+        <ul className={css.AuthNavUl}>
           <li>
             <Link to="register">
               Зареєструйся 
