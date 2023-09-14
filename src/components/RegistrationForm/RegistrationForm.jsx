@@ -9,6 +9,7 @@ import { register } from 'redux/auth/authOperations';
 import { useNavigate } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 import { selectAuthIsLoading } from 'redux/auth/authSelectors';
+import css from './RegistrationForm.module.css'
 // ==============================
 
 export const RegistrationForm = () => {
@@ -69,49 +70,52 @@ export const RegistrationForm = () => {
   };
 
   return (
-    <>
-      <h2>Реєстраційна форма</h2>
-      <form onSubmit={onFormSubmit}>
+    <section className={css.RegistrationFormSection}>
+      <h2 className={css.RegistrationFormTitle}>Registration form</h2>
+      <form onSubmit={onFormSubmit} className={css.RegistrationFormForm}>
         <label>
-          Ім'я
+          <span className={css.RegistrationFormSpan}>Name</span>
           <input
             onChange={onInputChange}
             type="text"
             name="name"
             value={name}
             required
-            placeholder="Введіть своє ім'я"
+            placeholder="Name"
+            className={css.RegistrationFormInput}
           />
         </label>
         <label>
-          Пошта
+          <span className={css.RegistrationFormSpan}>E-mail</span>
           <input
             onChange={onInputChange}
             value={email}
             type="email"
             name="email"
             required
-            placeholder="Введіть свою пошту"
+            placeholder="Email"
+            className={css.RegistrationFormInput}
           />
         </label>
         <label>
-          Пароль
+          <span className={css.RegistrationFormSpan}>Password</span>
           <input
             onChange={onInputChange}
             value={password}
             type="password"
             name="password"
             required
-            placeholder="Введіть пароль"
+            placeholder="Password"
+            className={css.RegistrationFormInput}
           />
         </label>
 
-        <button type="submit">
-          Реєстрація
+        <button type="submit" className={css.RegistrationFormButton}>
+          Sign Up
            {/* <VscPass /> */}
         </button>
       </form>
       {isLoading && <Loader />}
-    </>
+    </section>
   );
 };

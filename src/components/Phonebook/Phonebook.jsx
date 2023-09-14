@@ -2,7 +2,7 @@ import { useState } from 'react';
 // import { VscAdd } from 'react-icons/vsc';
 // import { Label, Input, Button } from './Phonebook.styled';
 // ==============================
-
+import css from './Phonebook.module.css'
 export const Phonebook = ({ onAddContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -37,10 +37,10 @@ export const Phonebook = ({ onAddContact }) => {
   };
 
   return (
-    <>
-      <form onSubmit={onFormSubmitAddContact}>
+    <section className={css.PhoneBookFormSection}>
+      <form onSubmit={onFormSubmitAddContact} className={css.PhoneBookFormForm}>
         <label>
-          Ім'я
+          Name
           <input
             onChange={onInputChange}
             type="text"
@@ -49,10 +49,12 @@ export const Phonebook = ({ onAddContact }) => {
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]{4,8}*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
+            placeholder="Write name"
+            className={css.PhoneBookFormInput}
           />
         </label>
         <label>
-          Номер
+        Number
           <input
             onChange={onInputChange}
             value={number}
@@ -61,14 +63,15 @@ export const Phonebook = ({ onAddContact }) => {
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
-            placeholder="Введіть номер"
+            placeholder="Write number"
+            className={css.PhoneBookFormInput}
           />
         </label>
-        <button type="submit">
-          Додати контакт 
+        <button type="submit" className={css.PhoneBookFormButton}>
+          Add contact
           {/* <VscAdd /> */}
         </button>
       </form>
-    </>
+    </section>
   );
 };

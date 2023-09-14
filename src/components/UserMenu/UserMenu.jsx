@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { logout } from 'redux/auth/authOperations';
 import { selectAuthUser } from 'redux/auth/authSelectors';
-
+import css from './UserMenu.module.css'
 // import { useMedia } from 'react-use';
 
 // import { toast } from 'react-toastify';
@@ -33,14 +33,14 @@ export const UserMenu = () => {
   };
 
   return (
-    <div>
-        <p>
+    <div className={css.UserMenuWrapper}>
+        <p className={css.UserMenuUser}>
           {/* <FcReading size={25} style={{ marginRight: '10px' }} />  */}
-          Привіт, {name}!
+          Welcome, {name}!
         </p>
 
-      <button onClick={onLogout} type="button">
-        Вийти
+      <button onClick={onLogout} type="button" className={css.UserMenuButton}>
+        Log out
         {/* <HiOutlineLogout /> */}
       </button>
     </div>

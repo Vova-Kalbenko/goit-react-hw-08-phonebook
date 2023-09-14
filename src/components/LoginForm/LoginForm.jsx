@@ -62,37 +62,40 @@ export const LoginForm = () => {
   };
 
   return (
-    <>
-      <h2>Увійти</h2>
-      <form onSubmit={onFormSubmit}>
+    <section className={css.LogInFormSection}>
+      <h2 className={css.LogInFormTitle}>Log In</h2>
+      <form onSubmit={onFormSubmit} className={css.LogInFormForm}>
         <label>
-          Пошта
+        E-mail
           <input
             onChange={onInputChange}
             value={email}
             type="email"
             name="email"
             required
-            placeholder="Введіть свою пошту"
+            placeholder="Email"
+            className={css.LogInFormInput}
           />
         </label>
         <label>
-          Пароль
+          Password
           <input
             onChange={onInputChange}
             value={password}
             type="password"
             name="password"
             required
-            placeholder="Введіть пароль"
+            placeholder="Password"
+            className={css.LogInFormInput}
           />
         </label>
 
-        <button type="submit">
+        <button type="submit" className={css.LogInFormButton}>
+          Log In
           {/* Увійти <VscPass /> */}
         </button>
       </form>
       {isLoading && <Loader />}
-    </>
+    </section>
   );
 };

@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(134, 120, 120);
+  background-color: rgb(160, 154, 154);
 }
 
 code {
@@ -26,6 +24,10 @@ p {
   margin-bottom: 0;
 }
 
+input {
+  outline: none;
+}
+
 ul,
 ol {
   list-style: none;
@@ -42,4 +44,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
 }

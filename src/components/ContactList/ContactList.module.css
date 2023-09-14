@@ -1,4 +1,4 @@
-.LogInFormSection {
+.ContactListFormSection {
     width: 410px;
     margin-left: auto;
     margin-right: auto;
@@ -12,7 +12,7 @@
     padding-right: 24px;
 }
 
-.LogInFormTitle {
+.PhoneBookFormTitle {
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
@@ -22,13 +22,13 @@
     margin-bottom: 16px;
 }
 
-.LogInFormForm {
+.PhoneBookFormForm {
     display: flex;
     flex-direction: column;
     row-gap: 22px;
 }
 
-.LogInFormInput {
+.PhoneBookFormInput {
     width: 100%;
     height: 40px;
     border: 2px solid rgba(33, 33, 33, 0.2);
@@ -38,11 +38,11 @@
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.LogInFormInput:focus {
+.PhoneBookFormInput:focus {
     border-color: yellow;
 }
 
-.LogInFormSpan {
+.PhoneBookFormSpan {
     display: block;
     font-weight: 400;
     font-size: 12px;
@@ -52,7 +52,7 @@
     margin-bottom: 4px;
 }
 
-.LogInFormButton {
+.PhoneBookFormButton {
     min-width: 169px;
     padding: 16px 32px 16px 32px;
     font-weight: 500;
@@ -66,6 +66,6 @@
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.LogInFormButton:hover{
+.PhoneBookFormButton:hover{
     background-color: yellow;
 }

@@ -4,6 +4,8 @@
     margin-right: auto;
     padding-left: 32px;
     padding-right: 32px;
+    padding-bottom: 40px;
+    padding-top: 20px;
 }
 .headerWrapper{
     display: flex;

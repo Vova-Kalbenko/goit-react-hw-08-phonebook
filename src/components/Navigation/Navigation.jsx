@@ -12,12 +12,12 @@ export const Navigation = () => {
         <ul className={css.NavigationUl}>
           <li>
             <NavLink to="/" end className={css.headerLogo}>
-              Дім
+              Home
             </NavLink>
           </li>
           {token && (
             <li>
-              <NavLink to="phonebook">Телефонна книга</NavLink>
+              <NavLink to="phonebook" className={css.headerPhoneBook}>PhoneBook</NavLink>
             </li>
           )}
         </ul>

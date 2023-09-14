@@ -9,14 +9,14 @@ export const AuthNav = () => {
 
         <ul className={css.AuthNavUl}>
           <li>
-            <Link to="register">
-              Зареєструйся 
+            <Link to="register" className={css.AuthNavA}>
+              Sign Up 
               {/* <HiOutlineUserAdd /> */}
             </Link>
           </li>
           <li>
-            <Link to="login">
-                Увійти
+            <Link to="login" className={css.AuthNavA}>
+            log In
             {/* <HiOutlineLogin/> */}
             </Link>
           </li>

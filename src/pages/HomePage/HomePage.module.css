@@ -5,3 +5,15 @@
     padding-left: 32px;
     padding-right: 32px;
 }
+.HomePageTitle {
+    font-size: 24px;
+    line-height: 1.08;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+.HomePageWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+}

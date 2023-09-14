@@ -1,16 +1,40 @@
 .headerLogo {
-    margin-right: 188px;
-    font-size: 18px;
-    line-height: 1.11;
-    padding-top: 26px;
-    padding-bottom: 26px;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    /* 133.333% */
-    letter-spacing: -0.36px;
-    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-right: 76px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: black;
 }
-.NavigationUl{
+
+.headerLogo:hover {
+    color: yellow;
+}
+
+.NavigationUl {
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerPhoneBook {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: black;
+    margin-left: auto;
+    margin-right: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.headerPhoneBook:hover{
+    color: yellow;
 }

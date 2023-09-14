@@ -3,9 +3,9 @@
 
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts, selectFilterContacts } from 'redux/contacts/contacts-selectors';
-
 // import { Contact, Ul, BtnWrapper, Button } from './ContactList.styled';
 // import { useState } from 'react';
+import css from './ContactList.module.css'
 import { deleteContacts } from 'redux/contacts/contacts-operations';
 // import { Modal } from 'components/Modal/Modal';
 // ===========================
@@ -34,8 +34,8 @@ export const ContactList = () => {
 //   }
 
   return (
-    <>
-      {!contacts.length && <p>Твоя телефонна книга пуста</p>}
+    <section className={css.ContactListFormSection}>
+      {!contacts.length && <p>PhoneBook is empty</p>}
       {filterContacts.length > 0 ? (
         <ul>
           {filterContacts.map(({ name, number, id }) => (
@@ -55,26 +55,19 @@ export const ContactList = () => {
               <div>
                 <button
                   type="button"
-                  name="updateBtn"
-                //   onClick={() => onModalOpen(id)}
-                >
-                  {/* <VscEdit /> */}
-                </button>
-                <button
-                  type="button"
                   name="deleteBtn"
                   onClick={() => onDeleteContact(id)}
                 >
-                  {/* <VscTrash /> */}
+                 X
                 </button>
               </div>
             </li>
           ))}
         </ul>
       ) : (
-        contacts.length > 0 && <p>Нічого не знайдено...</p>
+        contacts.length > 0 && <p>PhoneBook is empty</p>
       )}
       {/* {isModalOpen&&<Modal onCloseModal={onCloseModal} updateContactId={updateContactId}/>} */}
-    </>
+    </section>
   );
 };
