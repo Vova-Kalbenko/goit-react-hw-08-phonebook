@@ -6,7 +6,7 @@ export const Section =({title, children})=>{
   return(
     <section className={css.SectionTitle}>
       <h2>{title}</h2>
-      <div>{children}</div>      
+      <>{children}</>      
     </section>
   )
 }

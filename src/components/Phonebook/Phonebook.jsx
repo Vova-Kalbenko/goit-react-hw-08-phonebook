@@ -40,7 +40,7 @@ export const Phonebook = ({ onAddContact }) => {
     <section className={css.PhoneBookFormSection}>
       <form onSubmit={onFormSubmitAddContact} className={css.PhoneBookFormForm}>
         <label>
-          Name
+          <span className={css.PhoneBookFormSpan}>Name</span>
           <input
             onChange={onInputChange}
             type="text"
@@ -54,7 +54,7 @@ export const Phonebook = ({ onAddContact }) => {
           />
         </label>
         <label>
-        Number
+        <span className={css.PhoneBookFormSpan}>Number</span>
           <input
             onChange={onInputChange}
             value={number}

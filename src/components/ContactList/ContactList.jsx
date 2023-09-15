@@ -12,8 +12,8 @@ import { deleteContacts } from 'redux/contacts/contacts-operations';
 
 
 export const ContactList = () => {
-//   const [isModalOpen, setIsModalOpen] = useState(false);
-//   const [updateContactId, setUpdateContactId] = useState(null);
+  //   const [isModalOpen, setIsModalOpen] = useState(false);
+  //   const [updateContactId, setUpdateContactId] = useState(null);
 
   const dispatch = useDispatch();
 
@@ -24,20 +24,20 @@ export const ContactList = () => {
     dispatch(deleteContacts(id));
   };
 
-//   const onModalOpen = id => {
-//     setIsModalOpen(true);
-//     setUpdateContactId(id);
-//   };
+  //   const onModalOpen = id => {
+  //     setIsModalOpen(true);
+  //     setUpdateContactId(id);
+  //   };
 
-//   const onCloseModal =()=>{
-//     setIsModalOpen(false);
-//   }
+  //   const onCloseModal =()=>{
+  //     setIsModalOpen(false);
+  //   }
 
   return (
     <section className={css.ContactListFormSection}>
       {!contacts.length && <p>PhoneBook is empty</p>}
       {filterContacts.length > 0 ? (
-        <ul>
+        <ul className={css.ContactListFormForm}>
           {filterContacts.map(({ name, number, id }) => (
             <li key={id} data-id={id}>
               {/* <Avatar
@@ -47,18 +47,16 @@ export const ContactList = () => {
                 alt={'avatar'}
                 color={'#2196f3'}
               /> */}
-              <div>
-                <p>
+              <div className={css.ContactListdiv}>
+                <p className={css.PhoneBookFormSpan}>
                   {name}: {number}
                 </p>
-              </div>
-              <div>
                 <button
                   type="button"
                   name="deleteBtn"
                   onClick={() => onDeleteContact(id)}
                 >
-                 X
+                  X
                 </button>
               </div>
             </li>

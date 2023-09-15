@@ -5,7 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(160, 154, 154);
+  background: linear-gradient(
+    90deg,
+    rgb(130, 6, 202) 0%,
+    rgb(74, 34, 248) 100%
+  );
 }
 
 code {
@@ -22,6 +26,7 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 0;
+  color: aliceblue;
 }
 
 input {

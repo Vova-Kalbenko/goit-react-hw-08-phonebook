@@ -12,7 +12,7 @@
     padding-right: 24px;
 }
 
-.PhoneBookFormTitle {
+.ContactListFormTitle {
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
@@ -22,13 +22,18 @@
     margin-bottom: 16px;
 }
 
-.PhoneBookFormForm {
+.ContactListFormForm {
     display: flex;
     flex-direction: column;
     row-gap: 22px;
 }
-
-.PhoneBookFormInput {
+.ContactListdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.ContactListFormInput {
     width: 100%;
     height: 40px;
     border: 2px solid rgba(33, 33, 33, 0.2);
@@ -38,21 +43,21 @@
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.PhoneBookFormInput:focus {
+.ContactListFormInput:focus {
     border-color: yellow;
 }
 
 .PhoneBookFormSpan {
     display: block;
-    font-weight: 400;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 1.33;
+    color: aliceblue;
     letter-spacing: 0.04em;
-    color: #8E8F99;
     margin-bottom: 4px;
 }
 
-.PhoneBookFormButton {
+.ContactListFormButton {
     min-width: 169px;
     padding: 16px 32px 16px 32px;
     font-weight: 500;
@@ -66,6 +71,6 @@
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.PhoneBookFormButton:hover{
+.ContactListFormButton:hover{
     background-color: yellow;
 }

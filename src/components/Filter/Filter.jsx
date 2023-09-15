@@ -6,7 +6,7 @@ export const Filter = ({ onChangeFilter }) => {
   return (
     <div className={css.FilterWrapper}>
       <label>
-        Search contact
+        <span className={css.FilterFormSpan}>Search contact</span>
         <input onChange={e => onChangeFilter(e)} type="text" name="filter" placeholder='Seacrh' className={css.FilterFormInput} />
       </label>
     </div>
