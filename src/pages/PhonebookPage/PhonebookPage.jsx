@@ -13,10 +13,6 @@ import { Filter } from '../../components/Filter/Filter';
 import { Section } from '../../components/Section/Section';
 import Loader from 'components/Loader/Loader';
 
-// import { toast } from 'react-toastify';
-// import { PhonebookMain } from './PhonebookPage.styled';
-// ==============================
-
 const PhonebookPage = () => {
   const contacts = useSelector(selectContacts);
   const isLoading = useSelector(selectIsLoading);

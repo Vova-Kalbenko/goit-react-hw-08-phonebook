@@ -18,7 +18,7 @@ const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const PhonebookPage = lazy(() => import('pages/PhonebookPage/PhonebookPage'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
 const LogInPage = lazy(() => import('pages/LogInPage/LogInPage'));
-//============================================================
+
 
 export const App = () => {
   const dispatch = useDispatch();

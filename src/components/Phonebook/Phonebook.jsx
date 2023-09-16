@@ -1,8 +1,6 @@
 import { useState } from 'react';
-// import { VscAdd } from 'react-icons/vsc';
-// import { Label, Input, Button } from './Phonebook.styled';
-// ==============================
 import css from './Phonebook.module.css'
+
 export const Phonebook = ({ onAddContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -69,7 +67,6 @@ export const Phonebook = ({ onAddContact }) => {
         </label>
         <button type="submit" className={css.PhoneBookFormButton}>
           Add contact
-          {/* <VscAdd /> */}
         </button>
       </form>
     </section>

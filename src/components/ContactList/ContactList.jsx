@@ -1,19 +1,10 @@
-// import { VscTrash, VscEdit } from 'react-icons/vsc';
-// import Avatar from 'react-avatar';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts, selectFilterContacts } from 'redux/contacts/contacts-selectors';
-// import { Contact, Ul, BtnWrapper, Button } from './ContactList.styled';
-// import { useState } from 'react';
-import css from './ContactList.module.css'
 import { deleteContacts } from 'redux/contacts/contacts-operations';
-// import { Modal } from 'components/Modal/Modal';
-// ===========================
+import css from './ContactList.module.css'
 
 
 export const ContactList = () => {
-  //   const [isModalOpen, setIsModalOpen] = useState(false);
-  //   const [updateContactId, setUpdateContactId] = useState(null);
 
   const dispatch = useDispatch();
 
@@ -24,14 +15,6 @@ export const ContactList = () => {
     dispatch(deleteContacts(id));
   };
 
-  //   const onModalOpen = id => {
-  //     setIsModalOpen(true);
-  //     setUpdateContactId(id);
-  //   };
-
-  //   const onCloseModal =()=>{
-  //     setIsModalOpen(false);
-  //   }
 
   return (
     <section className={css.ContactListFormSection}>
@@ -40,13 +23,6 @@ export const ContactList = () => {
         <ul className={css.ContactListFormForm}>
           {filterContacts.map(({ name, number, id }) => (
             <li key={id} data-id={id}>
-              {/* <Avatar
-                round={true}
-                size={40}
-                name={name}
-                alt={'avatar'}
-                color={'#2196f3'}
-              /> */}
               <div className={css.ContactListdiv}>
                 <p className={css.PhoneBookFormSpan}>
                   {name}: {number}
@@ -55,6 +31,7 @@ export const ContactList = () => {
                   type="button"
                   name="deleteBtn"
                   onClick={() => onDeleteContact(id)}
+                   className={css.ContactListFormButton}
                 >
                   X
                 </button>

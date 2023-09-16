@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-// import { Label, Input } from './Filter.styled';
-// =============================
+
 import css from './Filter.module.css'
 export const Filter = ({ onChangeFilter }) => {
   return (

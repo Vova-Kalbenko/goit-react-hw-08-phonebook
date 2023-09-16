@@ -1,8 +1,8 @@
 import { selectAuthToken, selectAuthUser } from 'redux/auth/authSelectors';
 import { useSelector } from 'react-redux';
 import {BsArrowUp} from 'react-icons/bs'
-// import { HomePageMain, HomePageTitle, HomePageInfo } from './HomePage.styled';
-// ==============================
+
+
 import css from './HomePage.module.css'
 const HomePage = () => {
   const token = useSelector(selectAuthToken);
@@ -12,7 +12,6 @@ const HomePage = () => {
       {token ? (
         <>
           <h1> Welcome, {name}, your phonebook is below </h1>
-          {/* <h2>Your PhoneBook </h2> */}
         </>
       ) : (
         <div className={css.HomePageWrapper}>

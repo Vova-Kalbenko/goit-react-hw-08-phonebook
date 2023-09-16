@@ -1,16 +1,13 @@
 import { useState } from 'react';
-// import { VscPass } from 'react-icons/vsc';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
-
 // import { toast } from 'react-toastify';
-
-// import { Title, Label, Input, Button } from './RegistrationForm.styled';
 import { useNavigate } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 import { selectAuthIsLoading } from 'redux/auth/authSelectors';
 import css from './RegistrationForm.module.css'
-// ==============================
+
+
 
 export const RegistrationForm = () => {
   const [name, setName] = useState('');

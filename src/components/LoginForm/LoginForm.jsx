@@ -3,13 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from 'redux/auth/authOperations';
 // import { toast } from 'react-toastify';
-
-// import { VscPass } from 'react-icons/vsc';
-// import { Title, Label, Input, Button } from './LoginForm.styled';
 import { selectAuthIsLoading } from 'redux/auth/authSelectors';
 import Loader from 'components/Loader/Loader';
-// ==============================
 import css from './LoginForm.module.css'
+
+
 export const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -66,7 +64,7 @@ export const LoginForm = () => {
       <h2 className={css.LogInFormTitle}>Log In</h2>
       <form onSubmit={onFormSubmit} className={css.LogInFormForm}>
         <label>
-        E-mail
+        <span className={css.LogInFormSpan}>E-mail</span>
           <input
             onChange={onInputChange}
             value={email}
@@ -78,7 +76,7 @@ export const LoginForm = () => {
           />
         </label>
         <label>
-          Password
+          <span className={css.LogInFormSpan}>Password</span>
           <input
             onChange={onInputChange}
             value={password}
@@ -92,7 +90,6 @@ export const LoginForm = () => {
 
         <button type="submit" className={css.LogInFormButton}>
           Log In
-          {/* Увійти <VscPass /> */}
         </button>
       </form>
       {isLoading && <Loader />}

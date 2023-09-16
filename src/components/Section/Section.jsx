@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Section.module.css'
-// import {SectionPhonebook,Title} from './Section.styled';
-// ================================
+
+
 export const Section =({title, children})=>{
   return(
     <section className={css.SectionTitle}>
