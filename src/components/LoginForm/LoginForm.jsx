@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from 'redux/auth/authOperations';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { selectAuthIsLoading } from 'redux/auth/authSelectors';
 import Loader from 'components/Loader/Loader';
 import css from './LoginForm.module.css'
@@ -38,16 +38,14 @@ export const LoginForm = () => {
   const onFormSubmit = e => {
     e.preventDefault();
     dispatch(login(userRegisterData)).then(response => {
-      if (response.payload === 'Реєстрація не завершена, код помилки - 400') {
-        // toast.error('Ой-йо..Пароль або пошта невірні!');
+      if (response.payload === '404') {
         return;
       }
       if (response.payload === 'Network Error') {
-        // toast.error('Ой-йо..Помилка мережі!');
+        toast.error('Cannot fetch data. Check yout internet connection');
         return;
       }
       if (response.payload.token) {
-        // toast.success('Вітаю! Ти успішно увійшов!');
         navigate('/', { replace: true });
         onFormReset();
       }
@@ -73,6 +71,7 @@ export const LoginForm = () => {
             required
             placeholder="Email"
             className={css.LogInFormInput}
+            autoComplete='off'
           />
         </label>
         <label>
@@ -85,6 +84,7 @@ export const LoginForm = () => {
             required
             placeholder="Password"
             className={css.LogInFormInput}
+            autoComplete='off'
           />
         </label>
 

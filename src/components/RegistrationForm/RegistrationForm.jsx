@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 import { selectAuthIsLoading } from 'redux/auth/authSelectors';
@@ -44,16 +44,15 @@ export const RegistrationForm = () => {
   const onFormSubmit = e => {
     e.preventDefault();
     dispatch(register(userRegisterData)).then(response => {
-      if (response.payload === 'Запит не виконано, помилка - 400') {
-        // toast.error('Ой-йо...Такий користувач вже існує!');
+      if (response.payload === '400') {
+        console.log(response.payload)
         return;
       }
       if (response.payload === 'Network Error') {
-        // toast.error('Ой-йо...Помилка мережі!');
+        toast.error('Network Error');
         return;
       }
       if (response.payload.token) {
-        // toast.success('Вітаю! Ти успішно зареєструвався!');
         navigate('/', { replace: true });
         onFormReset();
       }
@@ -80,6 +79,7 @@ export const RegistrationForm = () => {
             required
             placeholder="Name"
             className={css.RegistrationFormInput}
+            autoComplete='off'
           />
         </label>
         <label>
@@ -92,6 +92,7 @@ export const RegistrationForm = () => {
             required
             placeholder="Email"
             className={css.RegistrationFormInput}
+            autoComplete='off'
           />
         </label>
         <label>
@@ -104,12 +105,12 @@ export const RegistrationForm = () => {
             required
             placeholder="Password"
             className={css.RegistrationFormInput}
+            autoComplete='off'
           />
         </label>
 
         <button type="submit" className={css.RegistrationFormButton}>
           Sign Up
-           {/* <VscPass /> */}
         </button>
       </form>
       {isLoading && <Loader />}

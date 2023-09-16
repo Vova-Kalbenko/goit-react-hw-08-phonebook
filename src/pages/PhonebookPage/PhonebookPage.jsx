@@ -6,7 +6,7 @@ import {
 } from 'redux/contacts/contacts-selectors';
 import { updateFilter } from 'redux/filter/filter-slice';
 import { addContacts } from 'redux/contacts/contacts-operations';
-
+import { toast } from 'react-toastify';
 import { Phonebook } from '../../components/Phonebook/Phonebook';
 import { ContactList } from '../../components/ContactList/ContactList';
 import { Filter } from '../../components/Filter/Filter';
@@ -22,9 +22,7 @@ const PhonebookPage = () => {
   const onAddContact = newUser => {
     const uniqUserSearch = contacts.find(({ name }) => name === newUser.name);
     uniqUserSearch
-      ? 
-    //   tyt bil toast
-      console.log(`"${uniqUserSearch.name}" вже є в телефонній книзі`)
+      ? toast.error(`"${uniqUserSearch.name}" already in phonebook`)
       : dispatch(addContacts(newUser));
   };
 

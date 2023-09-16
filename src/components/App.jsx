@@ -9,7 +9,8 @@ import {
   selectAuthToken,
 } from 'redux/auth/authSelectors';
 import { refreshCurrentUser } from 'redux/auth/authOperations';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
 import { PublicRoute } from 'hooks/publichook';
 import { PrivateRoute } from 'hooks/privatehook';
@@ -76,6 +77,7 @@ export const App = () => {
           </Route>
         </Routes>
       )}
+      <ToastContainer/>
     </>
   );
 };

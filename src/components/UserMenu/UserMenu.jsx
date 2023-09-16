@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { logout } from 'redux/auth/authOperations';
 import { selectAuthUser } from 'redux/auth/authSelectors';
+import { toast } from 'react-toastify';
 import css from './UserMenu.module.css'
 
 
@@ -14,12 +15,11 @@ export const UserMenu = () => {
 
   const onLogout = () => {
     dispatch(logout()).then(response => {
-      if (response.payload === 'Запит не виконано, помилка - 400') {
-        // toast.error('Ой-йо...Щось зламалось. Спробуй пізніше!');
+      if (response.payload === '400') {
+        toast.error('Something went wrong.');
         return;
       }
       if (!response.payload) {
-        // toast.success('Ти успішно вийшов! Скоріше повертайся!');
         navigate('/', { replace: true });
       }
     });

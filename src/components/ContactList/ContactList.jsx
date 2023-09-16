@@ -42,7 +42,6 @@ export const ContactList = () => {
       ) : (
         contacts.length > 0 && <p>PhoneBook is empty</p>
       )}
-      {/* {isModalOpen&&<Modal onCloseModal={onCloseModal} updateContactId={updateContactId}/>} */}
     </section>
   );
 };
