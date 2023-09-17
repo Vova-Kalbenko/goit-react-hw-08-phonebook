@@ -23,10 +23,28 @@ export const register = createAsyncThunk(
         dataUser
       );
       token.set(data.token);
-      toast.error('Welcome to an application');
+      toast.success('Welcome to an application', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       return data;
     } catch (error) {
-      toast.error('Something went wrong. Try again later');
+      toast.error('Something went wrong. Try again later', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       return rejectWithValue(error.message);
     }
   }
@@ -41,10 +59,28 @@ export const login = createAsyncThunk(
         dataUser
       );
       token.set(data.token);
-      toast.success('Welcome!');
+      toast.success('Welcome!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       return data;
     } catch (error) {
-      toast.error('Wrong email or password');
+      toast.error('Wrong email or password', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       return rejectWithValue(error.message);
     }
   }
